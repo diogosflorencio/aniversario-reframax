@@ -17,6 +17,9 @@ import preferencias
 import servidor_licenca
 from version import VERSION
 
+PASTA_OUTPUTS = "outputs"
+NOME_ARQUIVO_SAIDA = "aniversariantes_output.jpg"
+
 # Configuração da localização para português
 locale.setlocale(locale.LC_TIME, 'pt_BR')
 
@@ -217,6 +220,7 @@ class AniversariantesApp(QMainWindow):
             <b style='font-weight: bold;'>Preparação dos Dados:</b>
             <ul style='margin: 15px 0 15px 25px; padding: 15px;'>
                 <li>Coloque os arquivos excel (.xlsx) na pasta "planilhas"</li>
+                <li>Coloque imagens de fundo dos cartazes na pasta "modelos"</li>
                 <li>Os arquivos devem ter as colunas "Nome" e "Nascimento"</li>
             </ul>
         </li>
@@ -235,7 +239,7 @@ class AniversariantesApp(QMainWindow):
             <ul style='margin: 15px 0 15px 25px; padding: 15px;'>
                 <li>Cada layout usa uma foto de fundo diferente</li>
                 <li>Posições de nomes, dias e formas são definidas por layout (pasta <code>layouts/</code>)</li>
-                <li>Para criar um novo layout, adicione uma pasta em <code>layouts/nome_do_layout/</code> com <code>layout.json</code> e a imagem de fundo</li>
+                <li>Layouts aparecem automaticamente no app (pasta <code>layouts/</code>); cada um referencia um modelo em <code>modelos/</code></li>
             </ul>
         </li>
         <li style='margin-bottom: 20px;'>
@@ -268,7 +272,9 @@ class AniversariantesApp(QMainWindow):
         <p style='font-weight: bold; font-size: 15px; margin-bottom: 15px;'>Observações:</p>
         <ul style='color: #ffffff; margin-left: 25px; line-height: 1.8; font-size: 15px;'>
             <li>O programa processará automaticamente nomes muito longos</li>
-            <li>As imagens são salvas como "aniversariantes_output.jpg"</li>
+            <li>As imagens geradas ficam na pasta <code>outputs/</code></li>
+            <li>Modelos de fundo ficam na pasta <code>modelos/</code></li>
+            <li>Fontes ficam na pasta <code>fontes/</code></li>
             <li>Em caso de problemas, entre em contato comigo</li>
         </ul>
     </div>
@@ -284,6 +290,11 @@ class AniversariantesApp(QMainWindow):
         
         # Adiciona a aba Sobre
         self.tab_widget.addTab(about_tab, "Sobre")
+
+    def caminho_saida(self):
+        pasta = os.path.join(self.base_dir, PASTA_OUTPUTS)
+        os.makedirs(pasta, exist_ok=True)
+        return os.path.join(pasta, NOME_ARQUIVO_SAIDA)
 
     def atualizar_lista_excel(self):
         caminho_planilhas = os.path.join(self.base_dir, "planilhas")
@@ -722,7 +733,7 @@ class AniversariantesApp(QMainWindow):
             if not silencioso:
                 self.atualizar_preview()
 
-            caminho_saida = os.path.join(self.base_dir, "aniversariantes_output.jpg")
+            caminho_saida = self.caminho_saida()
             self.imagem.save(caminho_saida)
 
             self.salvar_btn.setEnabled(True)
@@ -892,7 +903,7 @@ class AniversariantesApp(QMainWindow):
     def salvar_imagem(self):
         if self.imagem:
             try:
-                caminho_saida = os.path.join(self.base_dir, "aniversariantes_output.jpg")
+                caminho_saida = self.caminho_saida()
                 self.imagem.save(caminho_saida)
                 QMessageBox.information(self, 'Sucesso ao salvar', f'A imagem foi salva em:\n{caminho_saida}')
             except Exception as e:

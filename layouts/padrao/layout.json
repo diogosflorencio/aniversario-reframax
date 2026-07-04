@@ -2,19 +2,19 @@
   "id": "padrao",
   "nome_exibicao": "Padrão",
   "descricao": "Layout original com fundo azul e lista centralizada",
-  "imagem_fundo": "../../aniversariantes.png",
+  "imagem_fundo": "../../modelos/padrao.png",
   "mes": {
     "y_rel": 0.1,
     "centralizado_h": true,
     "fonte_tamanho": 200,
-    "fonte_arquivo": "../../lumios-marker.otf",
+    "fonte_arquivo": "../../fontes/lumios-marker.otf",
     "cor": [43, 57, 100]
   },
   "lista": {
     "inicio_y": 450,
     "espacamento": 70,
     "fonte_tamanho": 30,
-    "fonte_arquivo": "../../OpenSans-Regular.ttf",
+    "fonte_arquivo": "../../fontes/OpenSans-Regular.ttf",
     "cor_texto": [43, 57, 100],
     "largura_linha": 600,
     "slots": []

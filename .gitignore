@@ -6,7 +6,8 @@ dist/
 *.spec.bak
 
 # Saídas e preferências locais
-aniversariantes_output.jpg
+outputs/*
+!outputs/.gitkeep
 preferencias.json
 
 # Dados sensíveis (planilhas ficam locais)

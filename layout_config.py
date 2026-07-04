@@ -43,7 +43,7 @@ def posicao_mes(config, altura_imagem):
         "y": y,
         "centralizado_h": mes.get("centralizado_h", True),
         "fonte_tamanho": mes.get("fonte_tamanho", 200),
-        "fonte_arquivo": resolver_caminho(config["_dir"], mes.get("fonte_arquivo", "../../OpenSans-Regular.ttf")),
+        "fonte_arquivo": resolver_caminho(config["_dir"], mes.get("fonte_arquivo", "../../fontes/OpenSans-Regular.ttf")),
         "cor": tuple(mes.get("cor", [43, 57, 100])),
     }
 
@@ -54,7 +54,7 @@ def config_lista(config):
         "inicio_y": lista.get("inicio_y", 450),
         "espacamento": lista.get("espacamento", 70),
         "fonte_tamanho": lista.get("fonte_tamanho", 30),
-        "fonte_arquivo": resolver_caminho(config["_dir"], lista.get("fonte_arquivo", "../../OpenSans-Regular.ttf")),
+        "fonte_arquivo": resolver_caminho(config["_dir"], lista.get("fonte_arquivo", "../../fontes/OpenSans-Regular.ttf")),
         "cor_texto": tuple(lista.get("cor_texto", [43, 57, 100])),
         "largura_linha": lista.get("largura_linha", 600),
         "slots": lista.get("slots", []),

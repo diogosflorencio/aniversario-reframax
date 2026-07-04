@@ -2,19 +2,19 @@
   "id": "exemplo_colunas",
   "nome_exibicao": "Exemplo — duas colunas",
   "descricao": "Modelo de layout alternativo: fundo próprio e posições relativas por slot",
-  "imagem_fundo": "../../aniversariantes.png",
+  "imagem_fundo": "../../modelos/padrao.png",
   "mes": {
     "y_rel": 0.08,
     "centralizado_h": true,
     "fonte_tamanho": 180,
-    "fonte_arquivo": "../../lumios-marker.otf",
+    "fonte_arquivo": "../../fontes/lumios-marker.otf",
     "cor": [43, 57, 100]
   },
   "lista": {
     "inicio_y": 380,
     "espacamento": 65,
     "fonte_tamanho": 28,
-    "fonte_arquivo": "../../OpenSans-Regular.ttf",
+    "fonte_arquivo": "../../fontes/OpenSans-Regular.ttf",
     "cor_texto": [43, 57, 100],
     "largura_linha": 520,
     "slots": [

@@ -5,7 +5,7 @@ a = Analysis(
     ['script_gui.py'],
     pathex=[],
     binaries=[],
-    datas=[('aniversariantes.png', '.'), ('planilhas/*.xlsx', 'planilhas'), ('layouts', 'layouts'), ('*.otf', '.'), ('*.ttf', '.'), ('layout_config.py', '.'), ('preferencias.py', '.'), ('servidor_licenca.py', '.'), ('version.py', '.')],
+    datas=[('modelos', 'modelos'), ('fontes', 'fontes'), ('outputs', 'outputs'), ('planilhas/*.xlsx', 'planilhas'), ('layouts', 'layouts'), ('layout_config.py', '.'), ('preferencias.py', '.'), ('servidor_licenca.py', '.'), ('version.py', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
