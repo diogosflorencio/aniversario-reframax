@@ -1,9 +1,9 @@
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
                              QHBoxLayout, QLabel, QComboBox, QPushButton, QFileDialog,
                              QMessageBox, QScrollArea, QGroupBox, QGridLayout, QTabWidget,
-                             QTextEdit, QSystemTrayIcon, QMenu, QCheckBox, QSpinBox)
+                             QSystemTrayIcon, QMenu, QCheckBox, QSpinBox, QTextBrowser)
 from PyQt6.QtCore import Qt, QTimer
-from PyQt6.QtGui import QPixmap, QImage, QAction, QIcon
+from PyQt6.QtGui import QPixmap, QImage, QAction, QIcon, QPainter, QColor, QFont
 from PIL import Image, ImageDraw, ImageFont
 from datetime import date
 import locale
@@ -15,6 +15,7 @@ import sys
 import layout_config
 import preferencias
 import servidor_licenca
+from version import VERSION
 
 # Configuração da localização para português
 locale.setlocale(locale.LC_TIME, 'pt_BR')
@@ -36,7 +37,7 @@ class AniversariantesApp(QMainWindow):
         self.iniciar_timer_agendamentos()
         
     def initUI(self):
-        self.setWindowTitle('Gerador de Aniversariantes - Conami')
+        self.setWindowTitle(f'Gerador de Aniversariantes v{VERSION}')
         self.setGeometry(100, 100, 1000, 700)
 
         # Widget central com abas
@@ -197,15 +198,15 @@ class AniversariantesApp(QMainWindow):
         about_layout = QVBoxLayout(about_tab)
         
         # Área de texto com informações
-        about_text = QTextEdit()
+        about_text = QTextBrowser()
+        about_text.setOpenExternalLinks(True)
         about_text.setReadOnly(True)
-        # Define a cor de fundo do QTextEdit e remove a borda
     
         
-        info_text = """
+        info_text = f"""
 <div style='padding: 40px; font-family: "Montserrat", sans-serif; color: #ffffff;'>
     <h2 style='color: #ffffff; margin-bottom: 20px; text-align: center; font-size: 32px;'>
-        Gerador de Aniversariantes - v0.3.0 com GUI
+        Gerador de Aniversariantes — v{VERSION}
     </h2>
     
     <h3 style='color: #ffffff; margin-top: 30px; padding: 15px; font-size: 28px;'>
@@ -273,7 +274,7 @@ class AniversariantesApp(QMainWindow):
     </div>
     
     <p style='color: #ffffff; font-family: "Consolas", monospace; font-size: 15px; margin-top: 35px; text-align: center; padding: 15px;'>
-        Desenvolvido por Diogo
+        Desenvolvido por <a href="https://www.linkedin.com/in/diogosflorencio/" style="color: #7eb8ff; text-decoration: none;">Diogo</a>
     </p>
 </div>
 """
@@ -380,15 +381,30 @@ class AniversariantesApp(QMainWindow):
             if idx >= 0:
                 self.estilo_combo.setCurrentIndex(idx)
 
+    def criar_icone_bandeja(self):
+        tamanho = 64
+        pixmap = QPixmap(tamanho, tamanho)
+        pixmap.fill(QColor(28, 32, 38))
+
+        painter = QPainter(pixmap)
+        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
+
+        painter.setPen(QColor(55, 62, 72))
+        painter.setBrush(QColor(55, 62, 72))
+        painter.drawRoundedRect(4, 4, tamanho - 8, tamanho - 8, 10, 10)
+
+        painter.setPen(QColor(86, 195, 116))
+        painter.setFont(QFont("Consolas", 22, QFont.Weight.Bold))
+        painter.drawText(pixmap.rect(), Qt.AlignmentFlag.AlignCenter, ">_")
+
+        painter.end()
+        return QIcon(pixmap)
+
     def configurar_bandeja(self):
-        icone_path = os.path.join(self.base_dir, "aniversariantes.png")
-        if os.path.isfile(icone_path):
-            icone = QIcon(icone_path)
-        else:
-            icone = self.style().standardIcon(self.style().StandardPixmap.SP_ComputerIcon)
+        icone = self.criar_icone_bandeja()
 
         self.tray_icon = QSystemTrayIcon(icone, self)
-        self.tray_icon.setToolTip("Gerador de Aniversariantes - Conami")
+        self.tray_icon.setToolTip("Gerador de Aniversariantes")
 
         menu = QMenu()
         acao_abrir = QAction("Abrir janela", self)
