@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+*.pyo
+build/
+dist/
+*.spec.bak
+
+# Saídas e preferências locais
+aniversariantes_output.jpg
+preferencias.json
+
+# Dados sensíveis (planilhas ficam locais)
+planilhas/*.xlsx
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+Desktop.ini
