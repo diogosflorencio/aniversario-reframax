@@ -1,8 +1,9 @@
 {
-  "id": "padrao",
-  "nome_exibicao": "Padrão",
+  "id": "diogo-nao-modelo-mensal",
+  "tipo": "mensal",
+  "nome_exibicao": "Diogo - modelo mensal",
   "descricao": "Layout original com fundo azul e lista centralizada",
-  "imagem_fundo": "../../modelos/padrao.png",
+  "imagem_fundo": "../../modelos/diogo-nao-modelo-mensal.png",
   "mes": {
     "y_rel": 0.1,
     "centralizado_h": true,

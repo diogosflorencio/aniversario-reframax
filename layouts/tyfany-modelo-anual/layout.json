@@ -1,0 +1,49 @@
+{
+  "id": "tyfany-modelo-anual",
+  "tipo": "anual",
+  "nome_exibicao": "Tyfany - modelo anual",
+  "descricao": "Cartaz anual com todos os meses; posições personalizáveis por mês em meses/1..12; modelo Tyfany",
+  "imagem_fundo": "../../modelos/tyfany-modelo-anual.png",
+  "titulo_ano": {
+    "y_rel": 0.03,
+    "centralizado_h": true,
+    "fonte_tamanho": 90,
+    "cor": [43, 57, 100]
+  },
+  "lista": {
+    "espacamento": 20,
+    "fonte_tamanho": 18,
+    "fonte_arquivo": "../../fontes/OpenSans-Regular.ttf",
+    "cor_texto": [43, 57, 100],
+    "largura_linha": 260
+  },
+  "meses": {
+    "1":  { "titulo": { "x_rel": 0.125, "y_abs": 95,  "centralizado_h": true, "fonte_tamanho": 26 }, "lista": { "inicio_y": 125 } },
+    "2":  { "titulo": { "x_rel": 0.375, "y_abs": 95,  "centralizado_h": true, "fonte_tamanho": 26 }, "lista": { "inicio_y": 125 } },
+    "3":  { "titulo": { "x_rel": 0.625, "y_abs": 95,  "centralizado_h": true, "fonte_tamanho": 26 }, "lista": { "inicio_y": 125 } },
+    "4":  { "titulo": { "x_rel": 0.875, "y_abs": 95,  "centralizado_h": true, "fonte_tamanho": 26 }, "lista": { "inicio_y": 125 } },
+    "5":  { "titulo": { "x_rel": 0.125, "y_abs": 380, "centralizado_h": true, "fonte_tamanho": 26 }, "lista": { "inicio_y": 410 } },
+    "6":  { "titulo": { "x_rel": 0.375, "y_abs": 380, "centralizado_h": true, "fonte_tamanho": 26 }, "lista": { "inicio_y": 410 } },
+    "7":  { "titulo": { "x_rel": 0.625, "y_abs": 380, "centralizado_h": true, "fonte_tamanho": 26 }, "lista": { "inicio_y": 410 } },
+    "8":  { "titulo": { "x_rel": 0.875, "y_abs": 380, "centralizado_h": true, "fonte_tamanho": 26 }, "lista": { "inicio_y": 410 } },
+    "9":  { "titulo": { "x_rel": 0.125, "y_abs": 665, "centralizado_h": true, "fonte_tamanho": 26 }, "lista": { "inicio_y": 695 } },
+    "10": { "titulo": { "x_rel": 0.375, "y_abs": 665, "centralizado_h": true, "fonte_tamanho": 26 }, "lista": { "inicio_y": 695 } },
+    "11": { "titulo": { "x_rel": 0.625, "y_abs": 665, "centralizado_h": true, "fonte_tamanho": 26 }, "lista": { "inicio_y": 695 } },
+    "12": { "titulo": { "x_rel": 0.875, "y_abs": 665, "centralizado_h": true, "fonte_tamanho": 26 }, "lista": { "inicio_y": 695 } }
+  },
+  "forma_padrao": {
+    "tipo": "retangulo",
+    "padding_h": 8,
+    "padding_v": 6,
+    "borda_offset": 1,
+    "escurecer_borda": 25
+  },
+  "estilos": {
+    "padrao": {},
+    "dia_esquerda": { "dia_x_rel": 0.08, "espacamento": 20 },
+    "colorido": {
+      "espacamento": 22,
+      "cores_fundo": [[230, 236, 255], [255, 230, 230], [230, 255, 230]]
+    }
+  }
+}

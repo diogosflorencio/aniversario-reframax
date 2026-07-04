@@ -11,6 +11,6 @@ Funcionalidades:
 - bandeja do sistema ao fechar a janela
 - lembrete mensal e geração/impressão automática
 
-Pastas: `planilhas/` (dados), `modelos/` (fundos), `fontes/` (tipografia), `layouts/` (configuração), `outputs/` (imagens geradas).
+Pastas: `planilhas/`, `modelos/`, `fontes/`, `layouts/` e `outputs/` - modelos e fontes aparecem automaticamente no app.
 
 Desenvolvido por [Diogo](https://www.linkedin.com/in/diogosflorencio/).

@@ -6,7 +6,11 @@ from datetime import date
 DEFAULTS = {
     "excel": "",
     "mes_index": 0,
+    "ano_index": 0,
     "layout_id": "padrao",
+    "modelo": "",
+    "fonte_lista": "",
+    "fonte_mes": "",
     "estilo": "Estilo padrão",
     "carregar_ao_iniciar": True,
     "lembrete_projeto": {
