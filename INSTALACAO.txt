@@ -1,0 +1,12 @@
+Gerador de Aniversariantes - instalacao portatil (Windows)
+
+Execute Aniversariantes.exe
+
+Pastas editaveis (adicione arquivos sem recompilar):
+  planilhas/  - planilhas Excel (.xlsx)
+  modelos/    - imagens de fundo (.png, .jpg)
+  fontes/     - fontes (.ttf, .otf)
+  layouts/    - um layout por subpasta com layout.json
+  outputs/    - imagens geradas
+
+Preferencias sao salvas em preferencias.json na raiz ao usar o app.

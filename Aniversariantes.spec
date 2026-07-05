@@ -1,12 +1,28 @@
-# -*- mode: python ; coding: utf-8 -*-
+# Build: .\build.ps1  ou  py -m PyInstaller Aniversariantes.spec --noconfirm --clean
+# Pastas modelos/, fontes/, layouts/, planilhas/ e outputs/ ficam na raiz (ao lado do .exe).
 
+from PyInstaller.utils.hooks import collect_submodules
+
+block_cipher = None
+
+hiddenimports = collect_submodules("PyQt6") + [
+    "layout_config",
+    "layout_editor",
+    "preferencias",
+    "servidor_licenca",
+    "version",
+    "win32print",
+    "win32ui",
+    "win32con",
+    "win32api",
+]
 
 a = Analysis(
-    ['script.py'],
+    ["script.py"],
     pathex=[],
     binaries=[],
-    datas=[('modelos', 'modelos'), ('fontes', 'fontes'), ('outputs', 'outputs'), ('planilhas/*.xlsx', 'planilhas'), ('layouts', 'layouts'), ('layout_config.py', '.'), ('preferencias.py', '.'), ('servidor_licenca.py', '.'), ('version.py', '.')],
-    hiddenimports=[],
+    datas=[],
+    hiddenimports=hiddenimports,
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -14,14 +30,14 @@ a = Analysis(
     noarchive=False,
     optimize=0,
 )
-pyz = PYZ(a.pure)
+pyz = PYZ(a.pure, cipher=block_cipher)
 
 exe = EXE(
     pyz,
     a.scripts,
     [],
     exclude_binaries=True,
-    name='Aniversariantes',
+    name="Aniversariantes",
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -32,8 +48,8 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon='NONE',
 )
+
 coll = COLLECT(
     exe,
     a.binaries,
@@ -41,5 +57,5 @@ coll = COLLECT(
     strip=False,
     upx=True,
     upx_exclude=[],
-    name='Aniversariantes',
+    name="Aniversariantes",
 )

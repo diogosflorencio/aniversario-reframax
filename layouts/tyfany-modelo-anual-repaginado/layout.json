@@ -1,0 +1,353 @@
+  {
+    "_comentarios": {
+      "tipo": "anual - um cartaz com todos os meses",
+      "titulo_ano": "Número do ano no topo (valor vem do combo Ano na interface)",
+      "lista": "Valores padrão da lista; cada meses/N/lista pode sobrescrever",
+      "meses": "Chaves 1-12. titulo = nome do mês; lista = posição dos aniversariantes daquele mês",
+      "x_rel": "0.125 = coluna 1, 0.375 = col 2, 0.625 = col 3, 0.875 = col 4 (grade 4x3)"
+    },
+    "id": "tyfany-modelo-anual-repaginado",
+    "tipo": "anual",
+    "nome_exibicao": "Tyfany - modelo anual repaginado",
+    "descricao": "Cartaz anual em grade 4x3 com posição por mês",
+    "imagem_fundo": "../../modelos/tyfany-modelo-anual-repaginado.png",
+    "mes": {
+      "y_abs": 272,
+      "x_rel": 0.125,
+      "centralizado_h": true,
+      "fonte_tamanho": 40,
+      "visivel": true,
+      "cor": [
+        43,
+        57,
+        100
+      ],
+      "fonte_arquivo": "../../fontes/lumios-marker.otf"
+    },
+    "lista": {
+      "inicio_y": 285,
+      "x_rel": 0.125,
+      "espacamento": 20,
+      "fonte_tamanho": 20,
+      "largura_linha": 260,
+      "cor_texto": [
+        43,
+        57,
+        100
+      ],
+      "fonte_arquivo": "../../fontes/OpenSans-Regular.ttf"
+    },
+    "forma_padrao": {
+      "tipo": "retangulo",
+      "padding_h": 8,
+      "padding_v": 6,
+      "borda_offset": 1,
+      "escurecer_borda": 25
+    },
+    "estilos": {
+      "padrao": {},
+      "dia_esquerda": {
+        "dia_x_rel": 0.08,
+        "espacamento": 20
+      },
+      "colorido": {
+        "espacamento": 22,
+        "cores_fundo": [
+          [
+            230,
+            236,
+            255
+          ],
+          [
+            255,
+            230,
+            230
+          ],
+          [
+            230,
+            255,
+            230
+          ]
+        ]
+      }
+    },
+    "titulo_ano": {
+      "y_abs": 80,
+      "x_rel": 0.5,
+      "centralizado_h": true,
+      "fonte_tamanho": 90,
+      "visivel": false,
+      "cor": [
+        43,
+        57,
+        100
+      ],
+      "fonte_arquivo": "../../fontes/lumios-marker.otf"
+    },
+    "meses": {
+      "1": {
+        "titulo": {
+          "y_abs": 271,
+          "x_rel": 0.128,
+          "centralizado_h": true,
+          "fonte_tamanho": 42,
+          "visivel": true,
+          "cor": [
+            43,
+            57,
+            100
+          ],
+          "fonte_arquivo": "../../fontes/lumios-marker.otf"
+        },
+        "lista": {
+          "inicio_y": 315,
+          "x_rel": 0.12,
+          "espacamento": 20,
+          "fonte_tamanho": 18,
+          "largura_linha": 260,
+          "cor_texto": [
+            43,
+            57,
+            100
+          ],
+          "fonte_arquivo": "../../fontes/OpenSans-Regular.ttf"
+        }
+      },
+      "2": {
+        "titulo": {
+          "y_abs": 273,
+          "x_rel": 0.31,
+          "centralizado_h": true,
+          "fonte_tamanho": 42,
+          "visivel": true,
+          "cor": [
+            43,
+            57,
+            100
+          ],
+          "fonte_arquivo": "../../fontes/lumios-marker.otf"
+        },
+        "lista": {
+          "inicio_y": 315,
+          "x_rel": 0.3,
+          "espacamento": 20,
+          "fonte_tamanho": 18,
+          "largura_linha": 260,
+          "cor_texto": [
+            43,
+            57,
+            100
+          ],
+          "fonte_arquivo": "../../fontes/OpenSans-Regular.ttf"
+        }
+      },
+      "3": {
+        "titulo": {
+          "y_abs": 279,
+          "x_rel": 0.49,
+          "centralizado_h": true,
+          "fonte_tamanho": 42,
+          "visivel": true,
+          "cor": [
+            43,
+            57,
+            100
+          ],
+          "fonte_arquivo": "../../fontes/lumios-marker.otf"
+        },
+        "lista": {
+          "inicio_y": 320,
+          "x_rel": 0.49,
+          "espacamento": 20,
+          "fonte_tamanho": 18,
+          "largura_linha": 260,
+          "cor_texto": [
+            43,
+            57,
+            100
+          ],
+          "fonte_arquivo": "../../fontes/OpenSans-Regular.ttf"
+        }
+      },
+      "4": {
+        "titulo": {
+          "x_rel": 0.12,
+          "y_abs": 651,
+          "centralizado_h": true,
+          "fonte_tamanho": 42,
+          "cor": [
+            43,
+            57,
+            100
+          ],
+          "visivel": true
+        },
+        "lista": {
+          "inicio_y": 697,
+          "x_rel": 0.12,
+          "espacamento": 20,
+          "fonte_tamanho": 18
+        }
+      },
+      "5": {
+        "titulo": {
+          "x_rel": 0.3028,
+          "y_abs": 651,
+          "centralizado_h": true,
+          "fonte_tamanho": 42,
+          "cor": [
+            43,
+            57,
+            100
+          ],
+          "visivel": true
+        },
+        "lista": {
+          "inicio_y": 697,
+          "x_rel": 0.3028,
+          "espacamento": 20,
+          "fonte_tamanho": 18
+        }
+      },
+      "6": {
+        "titulo": {
+          "x_rel": 0.4892,
+          "y_abs": 651,
+          "centralizado_h": true,
+          "fonte_tamanho": 42,
+          "cor": [
+            43,
+            57,
+            100
+          ],
+          "visivel": true
+        },
+        "lista": {
+          "inicio_y": 697,
+          "x_rel": 0.4892,
+          "espacamento": 20,
+          "fonte_tamanho": 18
+        }
+      },
+      "7": {
+        "titulo": {
+          "x_rel": 0.681,
+          "y_abs": 651,
+          "centralizado_h": true,
+          "fonte_tamanho": 42,
+          "cor": [
+            43,
+            57,
+            100
+          ],
+          "visivel": true
+        },
+        "lista": {
+          "inicio_y": 697,
+          "x_rel": 0.676,
+          "espacamento": 20,
+          "fonte_tamanho": 18
+        }
+      },
+      "8": {
+        "titulo": {
+          "x_rel": 0.1255,
+          "y_abs": 1024,
+          "centralizado_h": true,
+          "fonte_tamanho": 42,
+          "cor": [
+            43,
+            57,
+            100
+          ],
+          "visivel": true
+        },
+        "lista": {
+          "inicio_y": 1069,
+          "x_rel": 0.121,
+          "espacamento": 20,
+          "fonte_tamanho": 18
+        }
+      },
+      "9": {
+        "titulo": {
+          "x_rel": 0.3055,
+          "y_abs": 1024,
+          "centralizado_h": true,
+          "fonte_tamanho": 42,
+          "cor": [
+            43,
+            57,
+            100
+          ],
+          "visivel": true
+        },
+        "lista": {
+          "inicio_y": 1068,
+          "x_rel": 0.3055,
+          "espacamento": 20,
+          "fonte_tamanho": 18
+        }
+      },
+      "10": {
+        "titulo": {
+          "x_rel": 0.484,
+          "y_abs": 1024,
+          "centralizado_h": true,
+          "fonte_tamanho": 42,
+          "cor": [
+            43,
+            57,
+            100
+          ],
+          "visivel": true
+        },
+        "lista": {
+          "inicio_y": 1068,
+          "x_rel": 0.489,
+          "espacamento": 20,
+          "fonte_tamanho": 18
+        }
+      },
+      "11": {
+        "titulo": {
+          "x_rel": 0.681,
+          "y_abs": 1024,
+          "centralizado_h": true,
+          "fonte_tamanho": 42,
+          "cor": [
+            43,
+            57,
+            100
+          ],
+          "visivel": true
+        },
+        "lista": {
+          "inicio_y": 1068,
+          "x_rel": 0.676,
+          "espacamento": 20,
+          "fonte_tamanho": 18
+        }
+      },
+      "12": {
+        "titulo": {
+          "x_rel": 0.8655,
+          "y_abs": 1024,
+          "centralizado_h": true,
+          "fonte_tamanho": 42,
+          "cor": [
+            43,
+            57,
+            100
+          ],
+          "visivel": true
+        },
+        "lista": {
+          "inicio_y": 1068,
+          "x_rel": 0.861,
+          "espacamento": 20,
+          "fonte_tamanho": 18
+        }
+      }
+    }
+  }

@@ -1,0 +1,48 @@
+{
+  "id": "diogo-nao-modelo-mensal",
+  "tipo": "mensal",
+  "nome_exibicao": "Diogo - modelo mensal",
+  "descricao": "Layout original com fundo azul e lista centralizada",
+  "imagem_fundo": "../../modelos/diogo-nao-modelo-mensal.png",
+  "mes": {
+    "y_rel": 0.1,
+    "centralizado_h": true,
+    "fonte_tamanho": 200,
+    "fonte_arquivo": "../../fontes/lumios-marker.otf",
+    "cor": [43, 57, 100]
+  },
+  "lista": {
+    "inicio_y": 450,
+    "espacamento": 70,
+    "fonte_tamanho": 30,
+    "fonte_arquivo": "../../fontes/OpenSans-Regular.ttf",
+    "cor_texto": [43, 57, 100],
+    "largura_linha": 600,
+    "slots": []
+  },
+  "forma_padrao": {
+    "tipo": "retangulo",
+    "padding_h": 15,
+    "padding_v": 20,
+    "borda_offset": 1,
+    "escurecer_borda": 30
+  },
+  "estilos": {
+    "padrao": {},
+    "dia_esquerda": {
+      "dia_x_rel": 0.28,
+      "espacamento": 70
+    },
+    "colorido": {
+      "espacamento": 80,
+      "cores_fundo": [
+        [230, 236, 255],
+        [255, 230, 230],
+        [230, 255, 230],
+        [255, 247, 230],
+        [240, 230, 255],
+        [230, 247, 255]
+      ]
+    }
+  }
+}

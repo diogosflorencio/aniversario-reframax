@@ -1,0 +1,100 @@
+{
+  "_comentarios": {
+    "geral": "Copie esta pasta, renomeie e edite layout.json. Chaves com _ são só documentação - o app ignora.",
+    "tipo": "mensal = um mês por cartaz | anual = 12 colunas de meses",
+    "imagem_fundo": "Caminho relativo à pasta do layout (ex: ../../modelos/fundo.png)",
+    "posicao_y": "Use y_abs (pixels) OU y_rel (0.0 a 1.0 da altura). y_abs tem prioridade.",
+    "posicao_x": "Use x_abs (pixels da esquerda) OU x_rel (0.0 a 1.0 da largura). Com centralizado_h:true, x_rel é o centro do texto.",
+    "fonte_arquivo": "Caminho relativo à pasta do layout. Se omitido, usa fonte padrão ou a escolhida na interface.",
+    "cor": "RGB [R, G, B] - ex: [43, 57, 100]"
+  },
+
+  "id": "exemplo-referencia",
+  "tipo": "mensal",
+  "nome_exibicao": "Referência (não usar)",
+  "descricao": "Arquivo de referência com todos os campos documentados",
+  "imagem_fundo": "../../modelos/diogo-nao-modelo-mensal.png",
+
+  "mes": {
+    "_doc": "MODO MENSAL: título grande com o nome do mês (ex: Julho)",
+    "y_rel": 0.1,
+    "x_rel": 0.5,
+    "centralizado_h": true,
+    "fonte_tamanho": 200,
+    "fonte_arquivo": "../../fontes/lumios-marker.otf",
+    "cor": [43, 57, 100]
+  },
+
+  "titulo_ano": {
+    "_doc": "MODO ANUAL: número do ano no topo (ex: 2026). Omita esta seção no layout mensal.",
+    "y_rel": 0.03,
+    "x_rel": 0.5,
+    "centralizado_h": true,
+    "fonte_tamanho": 90,
+    "fonte_arquivo": "../../fontes/lumios-marker.otf",
+    "cor": [43, 57, 100]
+  },
+
+  "lista": {
+    "_doc": "Lista de aniversariantes. Valores globais; no anual, meses/N/lista sobrescreve por mês.",
+    "inicio_y": 450,
+    "espacamento": 70,
+    "fonte_tamanho": 30,
+    "fonte_arquivo": "../../fontes/OpenSans-Regular.ttf",
+    "cor_texto": [43, 57, 100],
+    "largura_linha": 600,
+    "x_rel": 0.5,
+    "deslocamento_y": 0,
+    "slots": [
+      {
+        "_doc": "Opcional: posição fixa por linha (índice 0 = 1º aniversariante)",
+        "y_abs": 450,
+        "nome": { "x_rel": 0.22 },
+        "dia": { "x_rel": 0.78 },
+        "forma": { "tipo": "retangulo", "cor": [230, 236, 255], "padding_h": 12, "padding_v": 14 }
+      }
+    ]
+  },
+
+  "meses": {
+    "_doc": "MODO ANUAL: chaves 1 a 12. Cada mês tem titulo (nome do mês) e lista (aniversariantes).",
+    "1": {
+      "titulo": {
+        "x_rel": 0.125,
+        "y_abs": 95,
+        "centralizado_h": true,
+        "fonte_tamanho": 26,
+        "fonte_arquivo": "../../fontes/OpenSans-Regular.ttf",
+        "cor": [43, 57, 100],
+        "visivel": true
+      },
+      "lista": {
+        "inicio_y": 125,
+        "espacamento": 20,
+        "fonte_tamanho": 18,
+        "largura_linha": 260,
+        "x_rel": 0.125,
+        "deslocamento_y": 0
+      }
+    }
+  },
+
+  "forma_padrao": {
+    "_doc": "Fundo atrás de cada linha (estilo colorido). tipo: retangulo | elipse | nenhuma",
+    "tipo": "retangulo",
+    "padding_h": 15,
+    "padding_v": 20,
+    "borda_offset": 1,
+    "escurecer_borda": 30
+  },
+
+  "estilos": {
+    "_doc": "Ajustes por estilo escolhido na interface (Estilo padrão / Linhas coloridas / Dias à esquerda)",
+    "padrao": {},
+    "dia_esquerda": { "dia_x_rel": 0.28, "espacamento": 70 },
+    "colorido": {
+      "espacamento": 80,
+      "cores_fundo": [[230, 236, 255], [255, 230, 230], [230, 255, 230]]
+    }
+  }
+}

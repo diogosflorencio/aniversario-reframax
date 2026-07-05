@@ -12,6 +12,9 @@ DEFAULTS = {
     "fonte_lista": "",
     "fonte_mes": "",
     "estilo": "Estilo padrão",
+    "cor_ano": [43, 57, 100],
+    "cor_mes": [43, 57, 100],
+    "cor_nomes": [43, 57, 100],
     "carregar_ao_iniciar": True,
     "lembrete_projeto": {
         "ativo": False,
@@ -20,7 +23,7 @@ DEFAULTS = {
     "geracao_automatica": {
         "ativo": False,
         "dia_mes": 1,
-        "imprimir": True,
+        "imprimir": False,
     },
     "ultimo_lembrete": "",
     "ultima_geracao_auto": "",

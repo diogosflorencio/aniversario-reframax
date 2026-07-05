@@ -1,0 +1,3 @@
+Coloque aqui as fontes usadas nos cartazes (.ttf, .otf).
+
+Referencie nos arquivos `layouts/*/layout.json` nos campos `fonte_arquivo`.

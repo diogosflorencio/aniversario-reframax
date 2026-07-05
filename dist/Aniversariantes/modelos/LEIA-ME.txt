@@ -1,0 +1,3 @@
+Coloque aqui as imagens de fundo dos cartazes (PNG, JPG).
+
+Cada layout nessa pasta referencia um arquivo desta pasta no campo "imagem_fundo".
